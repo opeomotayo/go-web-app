@@ -1,0 +1,3 @@
+go-web-app
+*.log
+.DS_Store
