@@ -3,3 +3,36 @@ service:
   identifier: gowebappservice
   orgIdentifier: default
   projectIdentifier: default_project
+  serviceDefinition:
+    spec:
+      manifests:
+        - manifest:
+            identifier: GoWebAppManifest
+            type: HelmChart
+            spec:
+              store:
+                type: Github
+                spec:
+                  connectorRef: GitHub_Connector
+                  gitFetchType: Branch
+                  folderPath: chart/values.yaml
+                  repoName: go-web-app
+                  branch: main
+              subChartPath: ""
+              optionalValuesYaml: false
+              skipResourceVersioning: false
+              enableDeclarativeRollback: false
+              helmVersion: V3
+              fetchHelmChartMetadata: false
+      artifacts:
+        primary:
+          primaryArtifactRef: <+input>
+          sources:
+            - spec:
+                connectorRef: Docker_Hub_Connector
+                imagePath: opeomotayo/go-web-app
+                tag: <+input>
+                digest: ""
+              identifier: DockerHubArtifactRepository
+              type: DockerRegistry
+    type: Kubernetes
