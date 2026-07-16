@@ -1,0 +1,5 @@
+service:
+  name: go-web-app-service
+  identifier: gowebappservice
+  orgIdentifier: default
+  projectIdentifier: default_project
