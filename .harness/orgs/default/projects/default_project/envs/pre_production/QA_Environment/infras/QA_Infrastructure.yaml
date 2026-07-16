@@ -1,0 +1,13 @@
+infrastructureDefinition:
+  name: QA Infrastructure
+  identifier: QA_Infrastructure
+  orgIdentifier: default
+  projectIdentifier: default_project
+  environmentRef: QA_Environment
+  deploymentType: Kubernetes
+  type: KubernetesDirect
+  spec:
+    connectorRef: Kubernetes_Cluster_Connector
+    namespace: go-web-app
+    releaseName: go-web-app-release
+  allowSimultaneousDeployments: false
