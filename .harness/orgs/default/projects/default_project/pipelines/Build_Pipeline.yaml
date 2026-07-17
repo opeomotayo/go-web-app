@@ -53,7 +53,7 @@ pipeline:
                     connectorRef: Docker_Hub_Connector
                     repo: opeomotayo/go-web-app
                     tags:
-                      - <+codebase.commitSha>
+                      - <+pipeline.sequenceId>
                     caching: false
                     dockerfile: Dockerfile
                     context: .
