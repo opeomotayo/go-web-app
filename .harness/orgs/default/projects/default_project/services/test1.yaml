@@ -3,3 +3,36 @@ service:
   identifier: test1
   orgIdentifier: default
   projectIdentifier: default_project
+  serviceDefinition:
+    spec:
+      manifests:
+        - manifest:
+            identifier: test
+            type: HelmChart
+            spec:
+              store:
+                type: Github
+                spec:
+                  connectorRef: GitHub_Connector
+                  gitFetchType: Commit
+                  folderPath: chart
+                  repoName: go-web-app
+                  commitId: <+pipeline.sequenceId>
+              subChartPath: chart/values.yaml
+              optionalValuesYaml: false
+              skipResourceVersioning: false
+              enableDeclarativeRollback: false
+              helmVersion: V3
+              fetchHelmChartMetadata: false
+      artifacts:
+        primary:
+          primaryArtifactRef: <+input>
+          sources:
+            - spec:
+                connectorRef: Docker_Hub_Connector
+                imagePath: opeomotayo/go-web-app
+                tag: <+pipeline.sequenceId>
+                digest: ""
+              identifier: test
+              type: DockerRegistry
+    type: Kubernetes
