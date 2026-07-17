@@ -1,5 +1,5 @@
 pipeline:
-  name: Build Pipeline
+  name: Build Deploy Pipeline
   identifier: Build_Pipeline
   projectIdentifier: default_project
   orgIdentifier: default
