@@ -33,7 +33,7 @@ service:
             - spec:
                 connectorRef: Docker_Hub_Connector
                 imagePath: opeomotayo/go-web-app
-                tag: <+pipeline.stages.<build_stage_id>.spec.execution.steps.BuildAndPushDockerRegistry_1.artifact_Tag>
+                tag: "10"
                 digest: ""
               identifier: DockerHubArtifactRepository
               type: DockerRegistry
