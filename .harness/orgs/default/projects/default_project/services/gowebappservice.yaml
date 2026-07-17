@@ -15,7 +15,7 @@ service:
                 spec:
                   connectorRef: GitHub_Connector
                   gitFetchType: Branch
-                  folderPath: chart/values.yaml
+                  folderPath: chart
                   repoName: go-web-app
                   branch: main
               subChartPath: ""
