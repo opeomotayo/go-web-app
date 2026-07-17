@@ -19,6 +19,8 @@ service:
                   repoName: go-web-app
                   branch: main
               subChartPath: ""
+              valuesPaths:
+                - chart/values.yaml
               optionalValuesYaml: false
               skipResourceVersioning: false
               enableDeclarativeRollback: false
