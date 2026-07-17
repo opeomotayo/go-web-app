@@ -1,0 +1,5 @@
+service:
+  name: Deploy Service
+  identifier: Deploy_Service
+  orgIdentifier: default
+  projectIdentifier: default_project
