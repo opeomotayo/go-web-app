@@ -1,7 +1,7 @@
 replicaCount: 2
 
 image:
-  repository: <your-dockerhub-username>/go-web-app
+  repository: opeomotayo/go-web-app
   tag: latest
   pullPolicy: IfNotPresent
 
