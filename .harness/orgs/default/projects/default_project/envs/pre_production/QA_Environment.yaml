@@ -1,6 +1,0 @@
-environment:
-  name: QA Environment
-  identifier: QA_Environment
-  orgIdentifier: default
-  projectIdentifier: default_project
-  type: PreProduction
