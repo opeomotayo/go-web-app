@@ -2,7 +2,6 @@ replicaCount: 2
 
 image:
   repository: opeomotayo/go-web-app
-  tag: 10
   pullPolicy: IfNotPresent
 
 service:
